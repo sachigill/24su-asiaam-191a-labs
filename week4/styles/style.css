@@ -1,0 +1,101 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: x-large;
+}
+
+
+html {
+    background-color: rgb(197, 184, 233);
+}
+
+html, body {
+    height: 80vh;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "portfolio map";
+    grid-template-columns: 1fr 1fr;
+}
+
+header { 
+    grid-area: header;
+}
+
+main { 
+    grid-area: main;
+}
+
+.portfolio {
+    grid-area: portfolio;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+#map { 
+    grid-area: map;
+    height: 80vh;
+}
+
+#footer {
+    grid-area: footer;
+    padding: 5px;
+    background-color: #4677a0;
+    color: #fff;
+    text-align: center;
+}
+
+.marker-movieLover, .marker-movieHater {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.marker-movieLover{
+    background-color: green;
+}
+
+.marker-movieHater {
+    background-color: #ff0000;
+}
+
+#movieLover:checked + label {
+    color: green;
+}
+
+#movieHater:checked + label {
+    color: red;
+}
+
+button {
+    background-color:  rgb(239, 188, 215);
+    color: rgb(37, 28, 28);
+    border: grey;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-family: fantasy;
+    
+}
