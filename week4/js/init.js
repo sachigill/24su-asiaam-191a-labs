@@ -14,9 +14,6 @@ function addMarker(data){
     let homeZipcode = data['What zipcode do you live in?'];
     let moviepref = data['Do you like watching movies?']
 
-    console.log(`moviepref: ${moviepref}`);
-    console.log(data);
-
     let category = moviepref == "Yes" ? "movieLover" : "movieHater";
     let popup_message;
     if (moviepref == "Yes"){
